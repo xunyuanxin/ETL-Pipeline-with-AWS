@@ -1,4 +1,4 @@
-# ETL-Pipeline-with-Redshift
+# ETL-Pipeline-with-AWS
 
 ## Introduction
 
