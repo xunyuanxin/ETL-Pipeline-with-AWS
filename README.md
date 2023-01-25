@@ -5,7 +5,7 @@
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
 Our task is to build an ETL pipeline that 
-- EXTRACTs their data from S3, stages them in Redshift, and 
+- EXTRACTs and LOADs their data from S3, stages them in Redshift, and 
 - TRANSFORMs data into a set of dimensional tables for their analytics team to continue finding insights into what songs their users are listening to.
 
 ![afa](https://video.udacity-data.com/topher/2022/May/62770f73_sparkify-s3-to-redshift-etl/sparkify-s3-to-redshift-etl.png)
@@ -47,7 +47,7 @@ Using the song and event datasets, a star schema optimized for queries on song p
 3. Launch a redshift cluster.
 4. Run `create_tables.py` to connect to the database and create fact and dimension tables for the star schema in Redshift.
 5. Run `etl.py` to load data from S3 into staging tables on Redshift, and then process that data into analytics tables on Redshift.
-6. Delete your redshift cluster when finished.
+6. Delete your redshift cluster after testing Example Queries.
 
 ## Example Queries
 
