@@ -47,7 +47,7 @@ Using the song and event datasets, a star schema optimized for queries on song p
 3. Launch a redshift cluster.
 4. Run `create_tables.py` to connect to the database and create fact and dimension tables for the star schema in Redshift.
 5. Run `etl.py` to load data from S3 into staging tables on Redshift, and then process that data into analytics tables on Redshift.
-6. Delete your redshift cluster when finished.
+6. Delete your redshift cluster after testing Example Queries.
 
 ## Example Queries
 
