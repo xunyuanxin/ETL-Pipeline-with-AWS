@@ -50,4 +50,32 @@ Using the song and event datasets, a star schema optimized for queries on song p
 6. Delete your redshift cluster after testing Example Queries.
 
 ## Example Queries
+1. Which 10 songs are the most popular ones?
+```python
+%%sql
+SELECT s.song_id,
+       s.title,
+       COUNT(*) times
+FROM songs s
+JOIN songplays sp
+ON s.song_id = sp.song_id
+GROUP BY s.title
+ORDER BY times DESC
+LIMIT 10
+```
+
+2. What time range has the highest traffic on the app?
+```python
+%%sql
+SELECT t.hour,
+       COUNT(*) hotness
+FROM songplays sp
+LEFT JOIN time t
+ON t.start_time = sp.start_time
+GROUP BY t.hour
+ORDER BY hotness DESC
+LIMIT 5
+```
+
+
 
