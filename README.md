@@ -24,7 +24,7 @@ Our task is to build an ETL pipeline that
 Using the song and event datasets, a star schema optimized for queries on song play analysis. This includes the following tables.
 
 **Fact Table**<br>
-1. **songplays** - records in event data associated with song plays i.e. records with page `NextSong`
+1. **songplays** - records in event data associated with song plays i.e. records with page 'NextSong'
 - *songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent*
 
 **Dimension Table**<br>
