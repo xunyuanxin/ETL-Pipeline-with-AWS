@@ -90,7 +90,7 @@ ORDER BY hotness DESC
 LIMIT 5
 ```
 
-4. Who are the most active 50 users?
+4. Who are the 50 most active users?
 ```python
 %%sql
 SELECT u.user_id,
