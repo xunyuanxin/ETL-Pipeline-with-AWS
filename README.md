@@ -1,6 +1,6 @@
 # ETL-Pipeline-with-Redshift
 
-### Introduction
+## Introduction
 
 A music streaming startup, Sparkify, has grown their user base and song database and want to move their processes and data onto the cloud. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 
@@ -10,7 +10,7 @@ Our task is to build an ETL pipeline that
 
 ![afa](https://video.udacity-data.com/topher/2022/May/62770f73_sparkify-s3-to-redshift-etl/sparkify-s3-to-redshift-etl.png)
 
-### Data Source
+## Data Source
 <br>**Song Dataset**
 <br>The first dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID.
 
@@ -20,7 +20,7 @@ Our task is to build an ETL pipeline that
 <br>**Log JSON Meta Information**
 <br>This third file contains the meta information that is required by AWS to correctly load `Log Dataset`
 
-### Schema for Song Play Analysis
+## Schema for Song Play Analysis
 Using the song and event datasets, a star schema optimized for queries on song play analysis. This includes the following tables.
 
 **Fact Table**<br>
@@ -41,7 +41,7 @@ Using the song and event datasets, a star schema optimized for queries on song p
 5. **time** - timestamps of records in **songplays** broken down into specific units
 - *start_time, hour, day, week, month, year, weekday*
 
-### ETL Pipeline
+## ETL Pipeline
 1. Create an IAM role that has read access to S3.
 2. Add redshift database and IAM role info to `dwh.cfg`.
 3. Launch a redshift cluster.
@@ -49,5 +49,5 @@ Using the song and event datasets, a star schema optimized for queries on song p
 5. Run `etl.py` to load data from S3 into staging tables on Redshift, and then process that data into analytics tables on Redshift.
 6. Delete your redshift cluster when finished.
 
-### Example Queries
+## Example Queries
 
