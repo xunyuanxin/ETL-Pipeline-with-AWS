@@ -61,10 +61,23 @@ JOIN songplays sp
 ON s.song_id = sp.song_id
 GROUP BY s.title
 ORDER BY times DESC
+LIMIT 50
+```
+
+2. Which 10 artists are most popular?
+```python
+%%sql
+SELECT a.name,
+       COUNT(*) hotness
+FROM songplays sp
+LEFT JOIN artists a
+ON sp.artist_id = a.artist_id
+GROUP BY a.name
+ORDER BY hotness DESC
 LIMIT 10
 ```
 
-2. What time range has the highest traffic on the app?
+3. What time range has the highest traffic on the app?
 ```python
 %%sql
 SELECT t.hour,
