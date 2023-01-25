@@ -50,7 +50,7 @@ Using the song and event datasets, a star schema optimized for queries on song p
 6. Delete your redshift cluster after testing Example Queries.
 
 ## Example Queries
-1. Which 10 songs are the most popular ones?
+1. Which 50 songs are most popular?
 ```python
 %%sql
 SELECT s.song_id,
