@@ -90,5 +90,20 @@ ORDER BY hotness DESC
 LIMIT 5
 ```
 
-
+4. Who are the most active 20 users?
+```python
+%%sql
+SELECT u.user_id,
+       u.first_name,
+       u.last_name,
+       u.gender,
+       u.level,
+       COUNT(*) activeness
+FROM songplays sp
+LEFT JOIN users u
+ON sp.user_id = u.user_id
+GROUP BY u.user_id
+ORDER BY activeness DESC
+LIMIT 20
+```
 
