@@ -77,7 +77,7 @@ ORDER BY hotness DESC
 LIMIT 10
 ```
 
-3. What time range has the highest traffic on the app?
+3. What time has the highest traffic on the app?
 ```python
 %%sql
 SELECT t.hour,
