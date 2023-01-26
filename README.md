@@ -53,8 +53,7 @@ Using the song and event datasets, a star schema optimized for queries on song p
 1. Which 20 songs are most popular?
 ```python
 %%sql
-SELECT s.song_id,
-       s.title,
+SELECT s.title,
        COUNT(*) times
 FROM songs s
 JOIN songplays sp
