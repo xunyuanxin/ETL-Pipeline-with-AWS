@@ -42,7 +42,7 @@ Using the song and event datasets, a star schema optimized for queries on song p
 - *start_time, hour, day, week, month, year, weekday*
 
 ## Files
-- `create_table.py` is for creating fact and dimension tables for the star schema in Redshift.
+- `create_table.py` <br>is for creating fact and dimension tables for the star schema in Redshift.
 - `etl.py` is for loading data from S3 into staging tables on Redshift and then process that data into analytics tables on Redshift.
 - `sql_queries.py` is our SQL statements, which will be imported into the two other files above.
 - `ETL Pipeline.ipynb` is for creating and deleting Redshift Cluster, and testing the data after ETL.
@@ -52,8 +52,8 @@ Using the song and event datasets, a star schema optimized for queries on song p
 1. Create an IAM role that has read access to S3.
 2. Add redshift database and IAM role info to `dwh.cfg`.
 3. Launch a redshift cluster.
-4. Run `create_tables.py` to connect to the database and create fact and dimension tables for the star schema in Redshift.
-5. Run `etl.py` to load data from S3 into staging tables on Redshift, and then process that data into analytics tables on Redshift.
+4. Run `create_tables.py`.
+5. Run `etl.py`.
 6. Delete your redshift cluster after testing Example Queries.
 
 ## Example Queries
