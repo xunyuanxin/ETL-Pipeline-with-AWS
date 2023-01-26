@@ -48,7 +48,7 @@ Using the song and event datasets, a star schema optimized for queries on song p
 - `ETL Pipeline.ipynb` <br>Create and delete Redshift Cluster, and test querying the data after ETL.
 - `dwh.cfg` <br>Configuration file that contains info about Redshift Cluster, IAM Role and S3. 
 
-## ETL Pipeline
+## Run the Python Scripts for ETL Pipeline
 1. Create an IAM role that has read access to S3.
 2. Add redshift database and IAM role info to `dwh.cfg`.
 3. Launch a redshift cluster using `ETL Pipeline.ipynb`.
