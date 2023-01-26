@@ -51,10 +51,10 @@ Using the song and event datasets, a star schema optimized for queries on song p
 ## ETL Pipeline
 1. Create an IAM role that has read access to S3.
 2. Add redshift database and IAM role info to `dwh.cfg`.
-3. Launch a redshift cluster.
+3. Launch a redshift cluster using `ETL Pipeline.ipynb`.
 4. Run `create_tables.py`.
 5. Run `etl.py`.
-6. Delete your redshift cluster after testing Example Queries.
+6. Delete your redshift cluster after testing Example Queries using `ETL Pipeline.ipynb`.
 
 ## Example Queries
 1. Which 20 songs are most popular?
